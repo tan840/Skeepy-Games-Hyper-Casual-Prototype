@@ -1,18 +1,24 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using DG.Tweening;
 
 public class PlayerMovement : MonoBehaviour
 {
-    // Start is called before the first frame update
-    void Start()
-    {
-        
-    }
+    public float moveSpeed = 5f;
 
-    // Update is called once per frame
-    void Update()
+    GameManager gameManager;
+
+    private void Start()
     {
+        gameManager = GameManager.instance;
+    }
+    private void Update()
+    {
+        if (gameManager.gameStarted)
+        {
+            transform.Translate(Vector3.forward * moveSpeed * Time.deltaTime);
+        }
         
     }
 }
