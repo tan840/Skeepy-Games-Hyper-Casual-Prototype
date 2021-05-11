@@ -5,7 +5,7 @@ using DG.Tweening;
 
 public class PlayerMovement : MonoBehaviour
 {
-    public float moveSpeed = 5f;
+    float moveSpeed = 5f;
 
     GameManager gameManager;
 
