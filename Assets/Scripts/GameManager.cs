@@ -79,11 +79,12 @@ public class GameManager : MonoBehaviour
     }
     void SwapPlanes(GameObject sceondPlane)
     {
-        print("Swap");
+        
         Vector3 pos1 = selectedPlane.transform.position;
         Vector3 pos2 = sceondPlane.transform.position;
         sceondPlane.transform.position = pos1;
         selectedPlane.transform.position = pos2;
+
     }
 
     void checkBtnClicks()
