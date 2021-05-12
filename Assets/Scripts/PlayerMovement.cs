@@ -5,7 +5,7 @@ using DG.Tweening;
 
 public class PlayerMovement : MonoBehaviour
 {
-    float moveSpeed = 5f;
+    public float moveSpeed = 5f;
 
     GameManager gameManager;
 
@@ -15,7 +15,7 @@ public class PlayerMovement : MonoBehaviour
     }
     private void Update()
     {
-        if (gameManager.gameStarted)
+        if (gameManager.gameStarted && !gameManager.gameEnded)
         {
             transform.Translate(Vector3.forward * moveSpeed * Time.deltaTime);
         }

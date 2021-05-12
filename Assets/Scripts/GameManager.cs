@@ -7,8 +7,10 @@ public class GameManager : MonoBehaviour
     public bool gameStarted;
     public bool gameEnded;
     public GameObject startPannel;
+    public GameObject levelCompletePannel;
     public GameObject[] planes;
     [SerializeField] GameObject selectedPlane;
+    LevelManager levelManager;
 
     //swaping Variables
     private int buttonClicks;
@@ -27,11 +29,21 @@ public class GameManager : MonoBehaviour
         }
         DontDestroyOnLoad(gameObject);
     }
+    private void Start()
+    {
+        levelManager = LevelManager.instance;
+    }
 
     public void TapToStart_btn()
     {
         gameStarted = true;
+        gameEnded = false;
         startPannel.SetActive(false);
+    }
+    public void LevelComplete_btn()
+    {
+        levelCompletePannel.SetActive(false);
+        levelManager.LoadNextLevel();
     }
 
     public void Middle_Btn()

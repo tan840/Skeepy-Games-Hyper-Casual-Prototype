@@ -5,6 +5,13 @@ using UnityEngine;
 public class ColourDetector : MonoBehaviour
 {
     public string colour;
+    GameManager gameManager;
+    LevelManager levelManager;
+    private void Start()
+    {
+        gameManager = GameManager.instance;
+        levelManager = LevelManager.instance;
+    }
 
 
     private void OnTriggerEnter(Collider other)
@@ -13,9 +20,14 @@ public class ColourDetector : MonoBehaviour
         {
             print("Match");
         }
-        else
+        if (other.gameObject.CompareTag("End"))
         {
-            print("Didnt Match");
+            print("End");
+            gameManager.gameEnded = true;
+            gameManager.gameStarted = false;
+            gameManager.levelCompletePannel.SetActive(true);
+            levelManager.SetCurrentLevel();
+
         }
     }
 }
