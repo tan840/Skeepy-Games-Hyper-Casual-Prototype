@@ -4,6 +4,10 @@ using UnityEngine;
 using UnityEngine.Audio;
 using TMPro;
 
+/// <summary>
+/// This class handles the GameMechanics
+/// </summary>
+
 public class GameManager : MonoBehaviour
 {
     public bool gameStarted;
@@ -59,8 +63,7 @@ public class GameManager : MonoBehaviour
         checkBtnClicks();
         
         if (buttonClicks == 2)
-        {
-            //print("Middle btn 2nd time");
+        {         
             SwapPlanes(planes[1],1);
             buttonClicks = 0;
         }
@@ -74,8 +77,7 @@ public class GameManager : MonoBehaviour
     {
         checkBtnClicks();
         if (buttonClicks == 2)
-        {
-           // print("left btn 2nd time");
+        {          
             SwapPlanes(planes[0], 0);
             buttonClicks = 0;
         }
@@ -90,7 +92,6 @@ public class GameManager : MonoBehaviour
         checkBtnClicks();
         if (buttonClicks == 2)
         {
-           // print("left btn 2nd time");
             SwapPlanes(planes[2],2);
             buttonClicks = 0;
         }

@@ -2,6 +2,10 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
+
+/// <summary>
+/// Detects the collison of the coloured holes
+/// </summary>
 public class ColourDetector : MonoBehaviour
 {
     public string colour;

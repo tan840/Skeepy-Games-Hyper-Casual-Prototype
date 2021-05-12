@@ -3,6 +3,9 @@ using System.Collections.Generic;
 using UnityEngine;
 using DG.Tweening;
 
+/// <summary>
+/// Handles the movement of the player
+/// </summary>
 public class PlayerMovement : MonoBehaviour
 {
     public float moveSpeed = 5f;

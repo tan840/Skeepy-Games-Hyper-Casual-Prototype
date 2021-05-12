@@ -5,6 +5,10 @@ using UnityEngine.UI;
 using DG.Tweening;
 using TMPro;
 
+
+/// <summary>
+/// Handles the progression of the level
+/// </summary>
 public class LevelManager : MonoBehaviour
 {
     public LevelData[] leveldata;
