@@ -18,15 +18,21 @@ public class ColourDetector : MonoBehaviour
     {
         if (other.gameObject.CompareTag(colour))
         {
-            print("Match");
+            //print("Match");
+            gameManager.point();
+        }
+        else
+        {
+            gameManager.DeductPoint();
         }
         if (other.gameObject.CompareTag("End"))
         {
-            print("End");
+            //print("End");
             gameManager.gameEnded = true;
             gameManager.gameStarted = false;
             gameManager.levelCompletePannel.SetActive(true);
             levelManager.SetCurrentLevel();
+            levelManager.slider.value = 1;
 
         }
     }
