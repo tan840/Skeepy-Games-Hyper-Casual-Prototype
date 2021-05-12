@@ -61,12 +61,6 @@ public class LevelManager : MonoBehaviour
         slider.value = 0f;
         gameManager.startPannel.SetActive(true);
         player.position = leveldata[currrentLevel].startingPos.position; ;
-        //player.DORotate(new Vector3(0f, startPos.localRotation.eulerAngles.y, 0f), 0.5f);
-        //player.transform.GetChild(0).transform.DOLocalRotate(new Vector3(0, 0, 0), 1f);
-
-        //rb.useGravity = false;
-       // anim.Play("Idle");
-
         LevelTextTopChange();
 
     }
@@ -77,8 +71,6 @@ public class LevelManager : MonoBehaviour
     }
     public void LoadNextLevel()
     {
-
-        //gameManager.startPos = leveldata[currrentLevel].startingPos;
         if (currrentLevel > 2)
         {
             leveldata[2].Level.SetActive(true);
@@ -92,8 +84,6 @@ public class LevelManager : MonoBehaviour
             leveldata[currrentLevel].startingPos = leveldata[currrentLevel].startingPos;
         }
 
-        //print(currrentLevel);
-
         ResetLevel();
 
     }
@@ -102,11 +92,9 @@ public class LevelManager : MonoBehaviour
         if (currrentLevel >= leveldata.Length)
         {
             currrentLevel = leveldata.Length;
-            //print("greater");
         }
         else if (currrentLevel < leveldata.Length)
         {
-            //print("less");
             currrentLevel++;
             player.GetComponent<PlayerMovement>().moveSpeed += 3;
         }
