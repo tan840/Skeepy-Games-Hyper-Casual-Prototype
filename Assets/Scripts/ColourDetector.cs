@@ -9,6 +9,8 @@ using UnityEngine;
 public class ColourDetector : MonoBehaviour
 {
     public string colour;
+
+
     GameManager gameManager;
     LevelManager levelManager;
     private void Start()

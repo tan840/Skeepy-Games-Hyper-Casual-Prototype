@@ -14,13 +14,13 @@ public class GameManager : MonoBehaviour
     public bool gameEnded;
     public GameObject startPannel;
     public GameObject levelCompletePannel;
-    public GameObject[] planes;
-    [SerializeField] GameObject selectedPlane;
-    LevelManager levelManager;
-
+    public GameObject[] planes;  
     public AudioSource audio;
     public TMP_Text score_text;
     public int score = 0;
+
+    [SerializeField] GameObject selectedPlane;
+    LevelManager levelManager;
     int index;
 
     //swaping Variables

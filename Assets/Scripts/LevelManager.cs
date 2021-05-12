@@ -16,8 +16,9 @@ public class LevelManager : MonoBehaviour
     public Slider slider;
     public static LevelManager instance;
     public Transform player;
-    float distance;
     public TMP_Text[] progressBarlevelText;
+
+    float distance;
     GameManager gameManager;
     private void Awake()
     {
