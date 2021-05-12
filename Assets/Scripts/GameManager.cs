@@ -110,6 +110,7 @@ public class GameManager : MonoBehaviour
         planes[index] = sceondPlane;
         planes[num] = selectedPlane;
         selectedPlane.transform.position = pos2;
+        selectedPlane = null;
 
     }
 
